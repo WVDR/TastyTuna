@@ -4,6 +4,7 @@ using System.Runtime.Serialization.Json;
 using System.Web;
 using System.Collections.Generic;
 using TastyTuna.Contracts;
+using System.Text.RegularExpressions;
 
 namespace TastyTuna.Helper_Classes
 {
@@ -11,14 +12,14 @@ namespace TastyTuna.Helper_Classes
     {
         public string CreateRequest(string queryString)
         {
-            string UrlRequest = "http://orchestra.emergea.mu:8080/rest/managementinformation/branches";
+            string UrlRequest = "http://orchestra.emergea.mu:8080/rest/managementinformation/branches";            
             return (UrlRequest);
         }
 
         public Data.Response MakeRequest(string requestUrl)
         {            
             HttpWebRequest request = WebRequest.Create(requestUrl) as HttpWebRequest;
-            request.Credentials = new NetworkCredential("Administrator", "n-63M!E)-w");
+            request.Credentials = new NetworkCredential("superadmin", "ulan");
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
                 if (response.StatusCode != HttpStatusCode.OK)
