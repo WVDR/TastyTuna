@@ -31,9 +31,9 @@ namespace TastyTuna
             try
             {
                 Requests requests = new Requests();
-                string locationsRequest = requests.CreateRequest("");
-                Data.Response bracnhesResponse = requests.MakeRequest(locationsRequest);
-                requests.ProcessResponse(bracnhesResponse);
+                string locationsRequest = requests.CreateBranchesRequest("");
+                Data.BranchesResponse bracnhesResponse = requests.MakeBranchesRequest(locationsRequest);
+                requests.ProcessBranchesResponse(bracnhesResponse);
             }
             catch (Exception e)
             {

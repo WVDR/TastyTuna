@@ -10,54 +10,79 @@ namespace TastyTuna.Contracts
 {
     public class Data
     {
-        [DataContract]
-        public class Response
+        public partial class BranchesResponse
         {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "customersWaiting")]
-            public int CustomersWaiting { get; set; }
-            [DataMember(Name = "openServicePoints")]
-            public string OpenServicePoints { get; set; }
-            [DataMember(Name = "maxWaitingTime")]
-            public string MaxWaitingTime { get; set; }
-            [DataMember(Name = "averageWaitingTime")]
-            public string[] AverageWaitingTime { get; set; }
-            [DataMember(Name = "totalWaitingTime")]
-            public string TotalWaitingTime { get; set; }
-            [DataMember(Name = "customersBeingServed")]
-            public string CustomersBeingServed { get; set; }
-            [DataMember(Name = "totalWaitingTime")]            
-            public Parameters[] Parameters { get; set; }
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public Branches[] branches;
         }
 
-
-        [DataContract]
-        public class Parameters
+        // Type created for JSON at <<root>> --> branches
+        [System.Runtime.Serialization.DataContractAttribute(Name = "branches")]
+        public partial class Branches
         {
-            [DataMember(Name = "description")]
-            public string Description { get; set; }
-            [DataMember(Name = "address1")]
-            public string Address1 { get; set; }
-            [DataMember(Name = "address2")]
-            public string Address2 { get; set; }
-            [DataMember(Name = "longitude")]
-            public long Longitude { get; set; }
-            [DataMember(Name = "latitude")]
-            public long Latitude { get; set; }
-            [DataMember(Name = "address3")]
-            public long Address3 { get; set; }
-            [DataMember(Name = "reset.time")]
-            public long ResetTime { get; set; }
-            [DataMember(Name = "postcode")]
-            public long postcode { get; set; }
-            [DataMember(Name = "city")]
-            public long City { get; set; }
-            [DataMember(Name = "country")]
-            public long Country { get; set; }
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int id;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string name;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int customersWaiting;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int openServicePoints;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int maxWaitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int averageWaitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int totalWaitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int customersBeingServed;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public Parameters parameters;
         }
 
+        // Type created for JSON at <<root>> --> parameters
+        [System.Runtime.Serialization.DataContractAttribute(Name = "parameters")]
+        public partial class Parameters
+        {
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string description;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string address1;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string address2;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string longitude;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string latitude;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string address3;
+
+            [System.Runtime.Serialization.DataMemberAttribute(Name = "reset.time")]
+            public string reset_002E_time;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string postcode;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string city;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string country;
+        }
     }
 }
