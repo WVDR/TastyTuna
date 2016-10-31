@@ -117,12 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="UriPassword" xml:space="preserve">
-    <value>ulan</value>
-    <comment>The password for the uri supplied to obtain the branches</comment>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_1_fish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_fish.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UriUserName" xml:space="preserve">
-    <value>superadmin</value>
-    <comment>The user name for the uri suplied to obtain the branches</comment>
+  <data name="_1_fish1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_fish.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

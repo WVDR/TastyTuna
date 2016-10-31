@@ -1,7 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TastyTuna.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UriPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ulan</Value>
+    </Setting>
+    <Setting Name="UriUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">superadmin</Value>
+    </Setting>
+    <Setting Name="BranchesUrl" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://orchestra.emergea.mu:8080/rest/managementinformation/branches</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

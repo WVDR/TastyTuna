@@ -20,7 +20,6 @@ namespace TastyTuna.Contracts
         [System.Runtime.Serialization.DataContractAttribute(Name = "branches")]
         public partial class Branches
         {
-
             [System.Runtime.Serialization.DataMemberAttribute()]
             public int id;
 
@@ -84,5 +83,83 @@ namespace TastyTuna.Contracts
             [System.Runtime.Serialization.DataMemberAttribute()]
             public string country;
         }
+
+        // Type created for JSON at <<root>>
+        [System.Runtime.Serialization.DataContractAttribute()]
+        public partial class QueuesResponse
+        {
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public Queues[] queues;
+        }
+
+        // Type created for JSON at <<root>> --> queues
+        [System.Runtime.Serialization.DataContractAttribute(Name = "queues")]
+        public partial class Queues
+        {
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int id;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int branchId;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string name;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string queueType;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string branchName;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int customersWaiting;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int openServicePoints;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int waitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int appointmentWaitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public double estimatedWaitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int customersServed;
+        }
+
+
+        // Type created for JSON at <<root>>
+        [System.Runtime.Serialization.DataContractAttribute()]
+        public partial class VisitsResponse
+        {
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public Visits[] visits;
+        }
+
+        // Type created for JSON at <<root>> --> visits
+        [System.Runtime.Serialization.DataContractAttribute(Name = "visits")]
+        public partial class Visits
+        {
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int waitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string ticketNumber;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string customerName;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public object appointmentWaitingTime;
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string serviceName;
+        }
+
     }
 }

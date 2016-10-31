@@ -61,20 +61,22 @@ namespace TastyTuna.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ulan.
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static string UriPassword {
+        internal static System.Drawing.Icon _1_fish {
             get {
-                return ResourceManager.GetString("UriPassword", resourceCulture);
+                object obj = ResourceManager.GetObject("_1_fish", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to superadmin.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string UriUserName {
+        internal static System.Drawing.Bitmap _1_fish1 {
             get {
-                return ResourceManager.GetString("UriUserName", resourceCulture);
+                object obj = ResourceManager.GetObject("_1_fish1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
