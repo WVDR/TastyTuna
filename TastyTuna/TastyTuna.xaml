@@ -12,12 +12,22 @@
         <Label Content="Branches Overview" Margin="115,10,10,259" Foreground="Pink" FontWeight="Bold" FontSize="15"/>
         <TextBlock Text="This is a demo dashboard to show what can be achieved with the new framework" TextWrapping="Wrap" FontSize="10" Foreground="Silver" Margin="115,41,10,195" RenderTransformOrigin="0.49,1.04" />
         <Label Content="Queues" Foreground="Pink" FontWeight="Bold" FontSize="15" Margin="0,110,0,164"/>
-        <DataGrid AutoGenerateColumns="True" Margin="0,136,0,0" Height="115" VerticalAlignment="Top" ItemsSource="{Binding DataContext.Queues}">
+        <DataGrid AutoGenerateColumns="False" Margin="0,136,0,0" Height="248" VerticalAlignment="Top" ItemsSource="{Binding DataContext.Queues}" HorizontalAlignment="Left" Width="494"
+                  SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" SelectionUnit="FullRow">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="BRANCH NAME" Width="Auto" Binding="{Binding .branchName}" IsReadOnly="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="QUEUE NAME" Width="Auto" IsReadOnly="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="CUSTOMERS WAITING" Width="Auto" IsReadOnly="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="WAITING TIME" Width="Auto" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="QUEUE NAME" Width="Auto" Binding="{Binding .name}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="CUSTOMERS WAITING" Binding="{Binding .customersWaiting}" Width="Auto" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="WAITING TIME" Width="Auto" Binding="{Binding .waitingTime}" IsReadOnly="True"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid AutoGenerateColumns="False" Height="248" ItemsSource="{Binding DataContext.Visits}" Margin="0,389,0,163">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="WAITING TIME" Width="Auto" Binding="{Binding .waitingTime}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="TICKET NUMBER" Width="Auto" Binding="{Binding .ticketNumber}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="CUSTOMER NAME" Binding="{Binding .customerName}" Width="Auto" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="APPOINTMENT WAITING TIME" Width="Auto" Binding="{Binding .appointmentWaitingTime}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="SERVICE NAME" Width="Auto" Binding="{Binding .serviceName}" IsReadOnly="True"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

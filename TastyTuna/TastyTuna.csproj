@@ -69,7 +69,8 @@
     </ApplicationDefinition>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\QueVisits.cs" />
+    <Compile Include="Models\Queue.cs" />
+    <Compile Include="Models\QueVisit.cs" />
     <Compile Include="ViewModels\TastyTunaViewModel.cs" />
     <Page Include="TastyTuna.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TastyTuna.Models
 {
-    public class QueVisits
+    public class QueVisit
     {
         /// <summary>
         /// The main reason for creating the class is to have a coupling being between the branch,que and visits

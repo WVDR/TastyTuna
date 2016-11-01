@@ -57,7 +57,7 @@ namespace TastyTuna
 
 
                 //Visits (must also be able to refresh)
-                foreach (Data.Queues que in _viewModel.DataContext.Queues)
+                foreach (Models.Queue que in _viewModel.DataContext.Queues)
                 {
                     string visitRequest = request.CreateVisitsRequest(que.branchId.ToString(), que.id.ToString());
                     Data.VisitsResponse visitsResponse = request.MakeVisitsRequest(visitRequest);
@@ -80,12 +80,18 @@ namespace TastyTuna
             }
         }
 
-        private void CheckVisits(Data.Queues que, Requests request)
+        private void CheckVisits(Models.Queue que)
         {
+            Requests request = new Requests();
             string visitRequest = request.CreateVisitsRequest(que.branchId.ToString(), que.id.ToString());
             Data.VisitsResponse visitsResponse = request.MakeVisitsRequest(visitRequest);
 
             _viewModel.DataContext.Visits = request.ProcessVisitsResponse(que, visitsResponse);            
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CheckVisits((Models.Queue)e.AddedItems[0]);
         }
     }
 }

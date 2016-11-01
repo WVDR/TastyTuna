@@ -31,9 +31,9 @@ namespace TastyTuna.Models
             }
         }
 
-        private List<Data.Queues> queues;
+        private List<Models.Queue> queues;
 
-        public List<Data.Queues> Queues
+        public List<Models.Queue> Queues
         {
             get
             {
@@ -50,9 +50,9 @@ namespace TastyTuna.Models
             }
         }
 
-        private List<QueVisits> visits;
+        private List<QueVisit> visits;
 
-        public List<QueVisits> Visits
+        public List<QueVisit> Visits
         {
             get
             {

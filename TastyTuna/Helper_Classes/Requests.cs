@@ -97,12 +97,25 @@ namespace TastyTuna.Helper_Classes
             }
         }
 
-        public List<Data.Queues> ProcessQueuesResponse(Data.QueuesResponse queuesResponse)
+        public List<Models.Queue> ProcessQueuesResponse(Data.QueuesResponse queuesResponse)
         {
-            List<Data.Queues> queues = new List<Data.Queues>();
+            List<Models.Queue> queues = new List<Models.Queue>();
             foreach (Data.Queues queue in queuesResponse.queues)
             {
-                queues.Add(queue);
+                queues.Add( new Models.Queue
+                {
+                    id = queue.id,
+                    branchId = queue.branchId,
+                    name = queue.name,
+                    queueType = queue.queueType,
+                    branchName = queue.branchName,
+                    customersWaiting = queue.customersWaiting,
+                    openServicePoints = queue.openServicePoints,
+                    waitingTime = queue.waitingTime,
+                    appointmentWaitingTime = queue.appointmentWaitingTime,
+                    estimatedWaitingTime = queue.estimatedWaitingTime,
+                    customersServed = queue.customersServed
+                });
             }
             return queues;
         }
@@ -140,12 +153,12 @@ namespace TastyTuna.Helper_Classes
             }
         }
 
-        public List<QueVisits> ProcessVisitsResponse(Data.Queues queuesResponse, Data.VisitsResponse visitsResponse)
+        public List<QueVisit> ProcessVisitsResponse(Models.Queue queuesResponse, Data.VisitsResponse visitsResponse)
         {
-            List<QueVisits> visits = new List<QueVisits>();
+            List<QueVisit> visits = new List<QueVisit>();
             foreach (Data.Visits visit in visitsResponse.visits)
             {
-                visits.Add(new QueVisits
+                visits.Add(new QueVisit
                 {
                     branchId = queuesResponse.branchId,
                     queId = queuesResponse.branchId,
