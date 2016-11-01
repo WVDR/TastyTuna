@@ -21,7 +21,8 @@
                 <DataGridTextColumn Header="WAITING TIME" Width="Auto" Binding="{Binding .waitingTime}" IsReadOnly="True"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid AutoGenerateColumns="False" Height="248" ItemsSource="{Binding DataContext.Visits}" Margin="0,389,0,163">
+        <Label Content="Visits" Foreground="Pink" FontWeight="Bold" FontSize="15" Margin="0,389,0,-389"/>
+        <DataGrid AutoGenerateColumns="False" Height="248" ItemsSource="{Binding DataContext.Visits}" Margin="0,418,0,134">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="WAITING TIME" Width="Auto" Binding="{Binding .waitingTime}" IsReadOnly="True"></DataGridTextColumn>
                 <DataGridTextColumn Header="TICKET NUMBER" Width="Auto" Binding="{Binding .ticketNumber}" IsReadOnly="True"></DataGridTextColumn>
